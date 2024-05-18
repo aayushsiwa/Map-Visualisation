@@ -24,6 +24,12 @@ def global_companies_map():
     map = folium.Map(location=[20, 0], zoom_start=2, tiles="cartodb-darkmatter")
     # add a marker cluster to handle multiple markers
     marker_cluster = MarkerCluster().add_to(map)
+
+    """ 
+    write a line/function which divides the data and send it to different geocoders
+    """
+
+
     # iterate over df
     for index, row in companies_data.iterrows():
         country_q = row["Country"]
