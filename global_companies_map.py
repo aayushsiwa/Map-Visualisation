@@ -16,7 +16,7 @@ def global_companies_map():
     st.header("Global Distrubution of Top Companies")
     companies_data = pd.read_csv(PATH_TO_DATA, index_col="Ranking")
     # slice and show limited data
-    # companies_data = companies_data[0:50]
+    companies_data = companies_data[0:20]
     st.dataframe(companies_data[["Company", "Country"]])
     geolocator = Nominatim(user_agent="ghwdata24_globalcompaniesdata")
     # geolocator = Photon(user_agent="ghwdata24_globalcompaniesdata")
